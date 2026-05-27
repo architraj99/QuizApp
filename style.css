@@ -15,7 +15,7 @@ body {
 }
 
 .card {
-  width: 430px;
+  width: 440px;
   background: #fffdf9;
   border: 1px solid #eadfce;
   border-radius: 24px;
@@ -86,4 +86,62 @@ button {
 
 button:hover {
   background: #b45d2f;
+}
+
+.quiz-screen {
+  display: none;
+}
+
+.quiz-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.question-count,
+.score {
+  font-size: 13px;
+  color: #9c7b5e;
+}
+
+.question-box {
+  background: #f8f2ea;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.question {
+  font-size: 24px;
+  line-height: 1.5;
+  color: #2d1f14;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.option-btn {
+  width: 100%;
+  border: 1px solid #eadfce;
+  background: #fffdf9;
+  border-radius: 14px;
+  padding: 15px;
+  text-align: left;
+  font-size: 15px;
+  color: #2d1f14;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.option-btn:hover {
+  background: #f8f2ea;
+  border-color: #c46a3a;
+}
+
+.next-btn {
+  margin-top: 4px;
 }

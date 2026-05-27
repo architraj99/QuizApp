@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QuizApp</title>
@@ -19,10 +19,11 @@
       QuizApp
     </div>
 
-    <h1>Minimal quiz challenge</h1>
-    <p class="sub">Answer timed multiple-choice questions and test your knowledge.</p>
+    <div id="startScreen">
 
-    <div class="start-screen">
+        
+        <h1>Minimal quiz challenge</h1>
+        <p class="sub">Answer timed multiple-choice questions and test your knowledge.</p>
 
       <div class="quiz-info">
 
@@ -42,6 +43,25 @@
 
       <button id="startBtn">Start Quiz</button>
       
+    </div>
+
+    <div class="quiz-screen" id="quizScreen">
+
+        <div class="quiz-top">
+
+            <p class="question-count" id="questionCount">Question 1 / 10</p>
+            <p class="score" id="score">Score: 0</p>
+        </div>
+
+        <div class="question-box">
+            
+            <h2 class="question" id="question">Question text</h2>
+        </div>
+
+        <div class="options" id="options"></div>
+
+        <button class="next-btn" id="nextBtn">Next Question</button>
+
     </div>
 
   </div>

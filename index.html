@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QuizApp</title>
+
+  <title>
+    QuizApp
+  </title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -21,14 +23,14 @@
 
     <div id="startScreen">
 
-        
-        <h1>Minimal quiz challenge</h1>
-        <p class="sub">Answer timed multiple-choice questions and test your knowledge.</p>
+      <h1>Minimal quiz challenge</h1>
+
+      <p class="sub">Answer timed multiple-choice questions and test your knowledge.</p>
 
       <div class="quiz-info">
 
         <div class="info-box">
-            
+
           <p class="info-label">Questions</p>
           <p class="info-value">10</p>
         </div>
@@ -42,26 +44,43 @@
       </div>
 
       <button id="startBtn">Start Quiz</button>
-      
+
     </div>
 
     <div class="quiz-screen" id="quizScreen">
 
-        <div class="quiz-top">
+      <div class="quiz-top">
 
-            <p class="question-count" id="questionCount">Question 1 / 10</p>
-            <p class="score" id="score">Score: 0</p>
-        </div>
+        <p class="question-count" id="questionCount">Question 1 / 10</p>
+        <p class="score" id="score">Score: 0</p>
+      </div>
 
-        <div class="question-box">
-            
-            <h2 class="question" id="question">Question text</h2>
-        </div>
+      <div class="progress">
 
-        <div class="options" id="options"></div>
+        <div class="progress-fill" id="progressFill"></div>
+        
+      </div>
 
-        <button class="next-btn" id="nextBtn">Next Question</button>
+      <div class="question-box">
 
+        <h2 class="question" id="question">Question text</h2>
+      </div>
+
+      <div class="options" id="options"></div>
+
+      <div class="bottom-row">
+
+        <div class="timer" id="timer">15s</div>
+        <button class="next-btn" id="nextBtn">Next</button>
+      </div>
+
+    </div>
+
+    <div class="result-screen" id="resultScreen">
+
+      <h2>Quiz completed</h2>
+      <p class="result-text" id="resultText">You scored 0/10</p>
+      <button id="restartBtn">Play Again</button>
     </div>
 
   </div>
@@ -69,4 +88,4 @@
   <script src="script.js"></script>
 
 </body>
-</html> 
+</html>

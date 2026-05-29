@@ -74,6 +74,96 @@ const questions = [
 
     answer:
       "Zach Latta"
+  },
+
+  {
+    question:
+      "Which is Euan's favourite game?",
+    
+    options: [
+        "Resident Evil",
+        "Subway Surfers",
+        "Subnautica 2",
+        "None Of The Above"
+    ],
+
+    answer:
+    "Subnautica 2"
+  },
+
+  {
+    question: 
+      "Where is HQ of HackClub located?",
+
+    options: [
+        "Vermount",
+        "UK",
+        "San Francisco",
+        "All Of The Above"
+    ],
+    
+    answer: 
+    "All Of The Above"
+  },
+
+  {
+    question:
+      "What is the full form of NASA?",
+
+    options: [
+        "National Aerospace and Space Administration",
+        "National Aeronautics and Space Administration",
+        "National Aircraft and Space Administration",
+        "None Of The Above"
+    ],
+    
+    answer:
+    "National Aeronautics and Space Administration"
+  },
+
+  {
+    question:
+      "What is the full form of IQ?",
+
+    options: [
+        "Intelligence Question",
+        "Intelligence Quotient",
+        "Interesting Quotient",
+        "None Of The Above"
+    ],
+
+    answer: 
+    "Intelligence Quotient"
+  },
+
+  {
+    question:
+      "The button combination to Undo is:",
+
+    options: [
+        "Ctrl + C",
+        "Ctrl + V",
+        "Ctrl + Y",
+        "Ctrl + Z"
+    ],
+    
+    answer:
+    "Ctrl + Z"
+  },
+
+  {
+    question:
+      "BONUS QUE- Find out the OG-",
+
+    options: [
+        "Euan Ripper",
+        "Zach Latta",
+        "Both Are OG",
+        "None Are OG"
+    ],
+
+    answer:
+    "Both Are OG"
   }
 ];
 

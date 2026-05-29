@@ -6,7 +6,7 @@
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background: #f3efe8;
+  background: linear-gradient(135deg, #f6f1ea, #ede4d7);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -15,32 +15,41 @@ body {
 }
 
 .card {
-  width: 440px;
-  background: #fffdf9;
-  border: 1px solid #eadfce;
-  border-radius: 24px;
+  width: 460px;
+
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 28px;
+
   padding: 34px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
 }
 
 .badge {
   display: inline-block;
-  padding: 6px 14px;
+  padding: 7px 15px;
+
   border-radius: 999px;
   background: #f4e8dc;
   color: #c46a3a;
+
   font-size: 12px;
   font-weight: 600;
-  margin-bottom: 20px;
+
+  margin-bottom: 22px;
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 32px;
   color: #2d1f14;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  line-height: 1.2;
 }
 
 .sub {
-  color: #9c7b5e;
+  color: #8d745d;
   line-height: 1.7;
   font-size: 14px;
   margin-bottom: 30px;
@@ -54,7 +63,9 @@ h1 {
 
 .info-box {
   flex: 1;
-  background: #f8f2ea;
+  background: rgba(255,255,255,0.6);
+
+  border: 1px solid #eadfce;
   border-radius: 18px;
   padding: 20px;
 }
@@ -73,18 +84,23 @@ h1 {
 
 button {
   border: none;
+
   background: #c46a3a;
   color: white;
+
   padding: 15px;
   border-radius: 14px;
   font-size: 15px;
   font-weight: 500;
+
   cursor: pointer;
+
   transition: 0.2s;
 }
 
 button:hover {
   background: #b45d2f;
+  transform: translateY(-1px);
 }
 
 #startBtn,
@@ -111,8 +127,9 @@ button:hover {
 
 .progress {
   width: 100%;
-  height: 6px;
-  background: #efe4d7;
+  height: 7px;
+  background: #eadfce;
+
   border-radius: 999px;
   overflow: hidden;
   margin-bottom: 24px;
@@ -127,35 +144,65 @@ button:hover {
 }
 
 .question-box {
-  background: #f8f2ea;
-  border-radius: 18px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid #eadfce;
+  border-radius: 20px;
   padding: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+}
+
+.question-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
 }
 
 .question {
+  flex: 1;
   font-size: 24px;
   line-height: 1.5;
   color: #2d1f14;
 }
 
+.timer {
+  min-width: 72px;
+
+  background: #f4e8dc;
+  color: #c46a3a;
+
+  padding: 10px 12px;
+  border-radius: 12px;
+
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
 .options {
   display: flex;
+
   flex-direction: column;
   gap: 12px;
+
   margin-bottom: 22px;
 }
 
 .option-btn {
   width: 100%;
+
+  background: rgba(255,255,255,0.8);
+
   border: 1px solid #eadfce;
-  background: #fffdf9;
-  border-radius: 14px;
-  padding: 15px;
+  border-radius: 16px;
+
+  padding: 16px;
   text-align: left;
   font-size: 15px;
+
   color: #2d1f14;
   cursor: pointer;
+
   transition: 0.2s;
 }
 
@@ -176,38 +223,27 @@ button:hover {
   color: #9f3434;
 }
 
-.bottom-row {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.timer {
-  width: 90px;
-  background: #f8f2ea;
-  border-radius: 14px;
-  padding: 14px;
-  text-align: center;
-  color: #9c7b5e;
-  font-weight: 600;
-}
-
 .next-btn {
-  flex: 1;
+  width: 100%;
 }
 
 .result-screen {
   text-align: center;
 }
 
+.result-icon {
+  font-size: 52px;
+  margin-bottom: 14px;
+}
+
 .result-screen h2 {
-  font-size: 28px;
+  font-size: 30px;
   color: #2d1f14;
   margin-bottom: 12px;
 }
 
 .result-text {
-  color: #9c7b5e;
+  color: #8d745d;
   margin-bottom: 28px;
   font-size: 15px;
 }

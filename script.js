@@ -1,6 +1,6 @@
-const startBtn = document.getElementById("startBtn");
+const startBtn = document.getElementById( "startBtn");
 const startScreen = document.getElementById("startScreen");
-const quizScreen = document.getElementById("quizScreen");
+const quizScreen = document.getElementById( "quizScreen");
 const resultScreen = document.getElementById("resultScreen");
 const questionEl = document.getElementById("question");
 const optionsEl = document.getElementById("options");
@@ -57,8 +57,22 @@ const questions = [
 
     answer:
       "CSS"
-  }
+  },
 
+  {
+    question:
+      "Who is the founder of HackClub?",
+
+    options: [
+      "Jack Latta",
+      "Archit Raj",
+      "Zach Latta",
+      "None Of The Above"
+    ],
+
+    answer:
+      "Zach Latta"
+  }
 ];
 
 let currentQuestion = 0;
@@ -73,7 +87,8 @@ function startTimer() {
   timeLeft = 15;
   timerEl.innerText = timeLeft + "s";
 
-  timer = setInterval(function () {
+  timer = setInterval(function() 
+    {
 
       timeLeft--;
       timerEl.innerText = timeLeft + "s";
@@ -95,6 +110,7 @@ function updateProgress() {
 function loadQuestion() {
 
   answered = false;
+  nextBtn.style.opacity = "1";
   const data = questions[currentQuestion];
   questionCountEl.innerText = "Question " + (currentQuestion + 1) + " / " + questions.length;
   questionEl.innerText = data.question;
@@ -128,6 +144,8 @@ function checkAnswer(selected, clickedBtn) {
   const allButtons = document.querySelectorAll(".option-btn");
 
   allButtons.forEach(btn => {
+
+    btn.disabled = true;
 
     if (btn.innerText === correct) {
 
@@ -168,11 +186,11 @@ function showResult() {
   resultText.innerText = "You scored " + score + "/" + questions.length;
 }
 
-nextBtn.addEventListener("click", function () {
+nextBtn.addEventListener("click", function() {
     nextQuestion();
 });
 
-startBtn.addEventListener("click", function () {
+startBtn.addEventListener("click", function() {
 
     startScreen.style.display = "none";
     quizScreen.style.display = "block";

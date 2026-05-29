@@ -25,7 +25,7 @@
 
       <h1>Minimal quiz challenge</h1>
 
-      <p class="sub">Answer timed multiple-choice questions and test your knowledge.</p>
+      <p class="sub">Answer timed multiple choice questions and test your knowledge.</p>
 
       <div class="quiz-info">
 
@@ -34,11 +34,11 @@
           <p class="info-label">Questions</p>
           <p class="info-value">10</p>
         </div>
-
+           
         <div class="info-box">
-
-          <p class="info-label">Time</p>
-          <p class="info-value">15s</p>
+            
+            <p class="info-label">Time</p>
+            <p class="info-value">15s</p>
         </div>
 
       </div>
@@ -58,21 +58,23 @@
       <div class="progress">
 
         <div class="progress-fill" id="progressFill"></div>
-        
+
       </div>
 
       <div class="question-box">
 
-        <h2 class="question" id="question">Question text</h2>
+        <div class="question-row">
+
+          <h2 class="question" id="question">Question text</h2>
+
+          <div class="timer" id="timer">15s</div>
+
+        </div>
+
       </div>
 
       <div class="options" id="options"></div>
-
-      <div class="bottom-row">
-
-        <div class="timer" id="timer">15s</div>
-        <button class="next-btn" id="nextBtn">Next</button>
-      </div>
+      <button class="next-btn" id="nextBtn">Next</button>
 
     </div>
 

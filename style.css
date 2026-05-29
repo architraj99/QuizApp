@@ -84,10 +84,7 @@ h1 {
 
 button {
   border: none;
-
-  background: #c46a3a;
   color: white;
-
   padding: 15px;
   border-radius: 14px;
   font-size: 15px;
@@ -99,13 +96,18 @@ button {
 }
 
 button:hover {
-  background: #b45d2f;
   transform: translateY(-1px);
 }
 
 #startBtn,
 #restartBtn {
   width: 100%;
+  background: #c46a3a;
+}
+
+#startBtn:hover,
+#restartBtn:hover {
+  background: #b45d2f;
 }
 
 .quiz-screen,
@@ -223,8 +225,28 @@ button:hover {
   color: #9f3434;
 }
 
+.bottom-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.quit-btn {
+  width: 120px;
+  background: #efe4d7;
+  color: #9c7b5e;
+}
+
+.quit-btn:hover {
+  background: #e5d6c4;
+}
+
 .next-btn {
-  width: 100%;
+  flex: 1;
+  background: #c46a3a;
+}
+
+.next-btn:hover {
+  background: #b45d2f;
 }
 
 .result-screen {
@@ -232,7 +254,7 @@ button:hover {
 }
 
 .result-icon {
-  font-size: 52px;
+  font-size: 54px;
   margin-bottom: 14px;
 }
 
@@ -246,4 +268,5 @@ button:hover {
   color: #8d745d;
   margin-bottom: 28px;
   font-size: 15px;
+  line-height: 1.7;
 }

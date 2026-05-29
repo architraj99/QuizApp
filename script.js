@@ -6,10 +6,12 @@ const questionEl = document.getElementById("question");
 const optionsEl = document.getElementById("options");
 const questionCountEl = document.getElementById("questionCount");
 const nextBtn = document.getElementById("nextBtn");
+const quitBtn = document.getElementById("quitBtn");
 const scoreEl = document.getElementById("score");
 const timerEl = document.getElementById("timer");
 const progressFill = document.getElementById("progressFill");
 const resultText = document.getElementById("resultText");
+const resultTitle = document.getElementById("resultTitle");
 const restartBtn = document.getElementById("restartBtn");
 
 const questions = [
@@ -67,7 +69,7 @@ const questions = [
       "Jack Latta",
       "Archit Raj",
       "Zach Latta",
-      "None Of The Above"
+      "Euan Ripper"
     ],
 
     answer:
@@ -110,10 +112,12 @@ function updateProgress() {
 function loadQuestion() {
 
   answered = false;
-  nextBtn.style.opacity = "1";
+
   const data = questions[currentQuestion];
+
   questionCountEl.innerText = "Question " + (currentQuestion + 1) + " / " + questions.length;
   questionEl.innerText = data.question;
+
   optionsEl.innerHTML = "";
 
   data.options.forEach(option => {
@@ -184,17 +188,35 @@ function showResult() {
   quizScreen.style.display = "none";
   resultScreen.style.display = "block";
   resultText.innerText = "You scored " + score + "/" + questions.length;
-}
 
-nextBtn.addEventListener("click", function() {
-    nextQuestion();
-});
+  if(score === questions.length) {
+    resultTitle.innerText = "Perfect Score";
+  }
+
+  else if(score >= 2) {
+    resultTitle.innerText = "Great Job";
+  }
+
+  else {
+    resultTitle.innerText = "Nice Try";
+  }
+
+}
 
 startBtn.addEventListener("click", function() {
 
     startScreen.style.display = "none";
     quizScreen.style.display = "block";
     loadQuestion();
+});
+
+nextBtn.addEventListener("click", function() {
+    nextQuestion();
+});
+
+quitBtn.addEventListener("click", function() {
+
+    location.reload();
 });
 
 restartBtn.addEventListener("click", function() {

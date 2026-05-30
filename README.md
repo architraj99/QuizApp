@@ -35,3 +35,4 @@ and receive a final score at the end of the quiz.
 - Java
 
 ## Screenshot
+<img width="713" height="883" alt="image" src="https://github.com/user-attachments/assets/7a263fb3-2166-42a3-802a-e7dfbef5ef03" />
